@@ -1,0 +1,2 @@
+export const LIST_FRUIT = 'LIST_FRUIT';
+export const LIST_VEGETABLES = 'LIST_VEGETABLES';
