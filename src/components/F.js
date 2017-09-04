@@ -2,17 +2,23 @@ import React from 'react';
 
 class F extends React.Component{
     render(){
-        return (
+
+        return(
             <div>
-                <input type="button" onClick={this}/>
+                <button onClick={this.changeUserInfo.bind(this)}>修改</button>
             </div>
         )
+
     }
 
-    ChangeListInfo(){
+    changeUserInfo(){
+        // 向 action 传递 数据 交给 redux 自行监听修改展示数
         const actions = this.props.actions;
-        actions.
+        actions.fruit({
+            info: ['x','y','z']
+        })
     }
+
 }
 
 export default F;

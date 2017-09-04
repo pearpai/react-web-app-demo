@@ -20,6 +20,7 @@ class Home extends React.Component {
                 <hr/>
                 <B userinfo = {this.props.userinfo}/>
                 <hr/>
+                {/*传递 行为 即 userinfo 里面的 action*/}
                 <C actions={this.props.userinfoActions}/>
 
             </div>
@@ -37,9 +38,9 @@ class Home extends React.Component {
 
 // 初始化界面 state 为上层store 传入，即返回当前类state 此处初始化了本地state中的 userinfo
 // userinfo 为reducer 中的 userinfo 的存入
-function mapStateToProps(state) {
+function mapStateToProps(reducerState) {
     return{
-        userinfo: state.userinfo
+        userinfo: reducerState.userinfo
     }
 }
 

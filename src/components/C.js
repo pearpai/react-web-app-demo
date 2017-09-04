@@ -12,6 +12,7 @@ class C extends React.Component{
     }
 
     changeUserInfo(){
+        // 向 action 传递 数据 交给 redux 自行监听修改展示数
         const actions = this.props.actions;
         actions.login({
             userid: '123',

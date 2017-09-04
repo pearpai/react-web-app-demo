@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import * as listInfoActions from '../../actions/listInfo';
+import F from "../../components/F";
 
 
 class List extends React.Component {
@@ -14,13 +15,15 @@ class List extends React.Component {
                 <p>List</p>
                 <hr/>
                 <E listInfo={this.props.listInfo}/>
+                <F actions={this.props.listInfoActions}/>
             </div>
         )
     }
 
     componentDidMount() {
         this.props.listInfoActions.fruit({
-            info: '111112213123123'
+            info:
+                [1, 2, 3, 4]
         })
     }
 
